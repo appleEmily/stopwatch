@@ -40,6 +40,13 @@ class ViewController: UIViewController {
         }
         
     }
+    @IBAction func reset(_ sender: Any) {
+        if timer.isValid {
+            timer.invalidate()
+        }
+        count = 0.0
+        label.text = String(format: "%.2f", count)
+    }
     
     @objc func up() {
         count += 0.01
